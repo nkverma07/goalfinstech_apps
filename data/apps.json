@@ -1,0 +1,20 @@
+[
+  {
+    "id": "app1",
+    "name": "All Video Player & Saver",
+    "icon": "/dl.jpg",
+    "webUrl": "https://goalfinstech.app",
+    "repoUrl": "https://github.com/yourorg/all-video-player-saver",
+    "version": "0.0.0",
+    "downloadUrl": "https://github.com/yourorg/all-video-player-saver/releases/latest/download/app1.apk"
+  },
+  {
+    "id": "app2",
+    "name": "QR Scanner Barcode Reader",
+    "icon": "/qr.png",
+    "webUrl": "https://goalfinstech.app",
+    "repoUrl": "https://github.com/yourorg/qr-scanner-barcode-reader",
+    "version": "0.0.0",
+    "downloadUrl": "https://github.com/yourorg/qr-scanner-barcode-reader/releases/latest/download/app2.apk"
+  }
+]

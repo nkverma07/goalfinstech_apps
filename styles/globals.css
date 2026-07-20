@@ -1,0 +1,21 @@
+:root {
+	--brand-cyan: #00d4ff;
+	--brand-blue: #0366d6;
+	--bg-layer1: rgba(0,212,255,0.06);
+	--bg-layer2: rgba(3,102,214,0.04);
+	--card-bg: rgba(255,255,255,0.9);
+	--muted: #666;
+}
+
+body {
+	background: radial-gradient(circle at 12% 15%, var(--bg-layer1), transparent 14%),
+							radial-gradient(circle at 88% 85%, var(--bg-layer2), transparent 25%),
+							linear-gradient(180deg, #fbfeff 0%, #f6f9ff 100%);
+	min-height: 100vh;
+	margin: 0;
+	color: #111;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a { color:inherit }
