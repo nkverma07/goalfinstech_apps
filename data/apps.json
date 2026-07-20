@@ -6,7 +6,7 @@
     "webUrl": "https://goalfinstech.app",
     "repoUrl": "https://github.com/yourorg/all_in_one_downloader",
     "version": "0.0.0",
-    "downloadUrl": "https://github.com/yourorg/app-releases/releases/download/app1-latest/app1.apk"
+    "downloadUrl": "https://github.com/yourorg/app1-releases/releases/latest/download/app1.apk"
   },
   {
     "id": "app2",
@@ -15,6 +15,6 @@
     "webUrl": "https://goalfinstech.app",
     "repoUrl": "https://github.com/yourorg/qr-scanner-barcode-reader",
     "version": "0.0.0",
-    "downloadUrl": "https://github.com/yourorg/app-releases/releases/download/app2-latest/app2.apk"
+    "downloadUrl": "https://github.com/yourorg/app2-releases/releases/latest/download/app2.apk"
   }
 ]
