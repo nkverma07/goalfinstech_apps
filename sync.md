@@ -1,12 +1,16 @@
 # Sync Guide — Update Portal (goalfinstech_apps)
 
-This Next.js app is the **public update portal**. It lists the apps and serves
-the latest version + download link for each. It does **not** build anything —
-each app repo's CI pushes its new version here.
+This Next.js app is the **update portal** (deployed at `https://goalfinstech.app`).
+It lists the apps and serves the latest version + download link for each. It does
+**not** build anything — each app repo's CI pushes its new version here.
 
-App repos:
-- `app1` = All Video Player & Saver → `<owner>/all_in_one_downloader`
-- `app2` = QR Scanner Barcode Reader → `<owner>/<qr-repo>`
+This repo can be **private** — Vercel still serves the site publicly.
+
+Repos involved:
+- `app1` = All Video Player & Saver → `<owner>/all_in_one_downloader` (private)
+- `app2` = QR Scanner Barcode Reader → `<owner>/<qr-repo>` (private)
+- `<owner>/app-releases` (**public**) → hosts the APK files that this portal
+  links to. Download links point here, not at the private app repos.
 
 ---
 
@@ -22,7 +26,7 @@ The single source of truth is **`data/apps.json`**. Each entry:
   "webUrl": "https://example.com/app1",
   "repoUrl": "https://github.com/<owner>/all_in_one_downloader",
   "version": "1.0.1+37",
-  "downloadUrl": "https://github.com/<owner>/all_in_one_downloader/releases/latest/download/app1.apk"
+  "downloadUrl": "https://github.com/<owner>/app-releases/releases/download/app1-latest/app1.apk"
 }
 ```
 
@@ -44,9 +48,10 @@ so a redeploy immediately reflects the new version.
 ## What happens on every app update
 
 ```
-app repo push → CI builds APK → CI commits new version + downloadUrl
-              → into THIS repo's data/apps.json → Vercel auto-redeploys
-              → homepage shows the new version and serves the new APK
+app repo push → CI builds APK → CI publishes APK to public app-releases repo
+              → CI commits new version + downloadUrl into THIS repo's
+                data/apps.json → Vercel auto-redeploys
+              → homepage shows the new version and links to the new APK
 ```
 
 You normally **do nothing** in this repo when a new app version ships — CI does.
@@ -59,9 +64,10 @@ You normally **do nothing** in this repo when a new app version ships — CI doe
    (including CI's metadata commits) auto-redeploys. No env vars required.
 2. **Seed `data/apps.json`**: set the correct `id`, `name`, `icon`, `webUrl`,
    `repoUrl` for each app. Leave `version`/`downloadUrl` — CI fills them.
-3. **Give each app repo write access**: create a token with **contents: write**
-   on this repo and add it as the `PORTAL_REPO_TOKEN` secret in each app repo.
-   That token is what lets CI commit here.
+3. **Give each app repo write access**: create a PAT with **contents: write** on
+   this repo (and on the public `app-releases` repo) and add it as the
+   `PUBLISH_TOKEN` secret in each app repo. That token lets CI upload the APK to
+   `app-releases` and commit the metadata here.
 
 ---
 

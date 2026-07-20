@@ -4,9 +4,9 @@
     "name": "All Video Player & Saver",
     "icon": "/dl.jpg",
     "webUrl": "https://goalfinstech.app",
-    "repoUrl": "https://github.com/yourorg/all-video-player-saver",
+    "repoUrl": "https://github.com/yourorg/all_in_one_downloader",
     "version": "0.0.0",
-    "downloadUrl": "https://github.com/yourorg/all-video-player-saver/releases/latest/download/app1.apk"
+    "downloadUrl": "https://github.com/yourorg/app-releases/releases/download/app1-latest/app1.apk"
   },
   {
     "id": "app2",
@@ -15,6 +15,6 @@
     "webUrl": "https://goalfinstech.app",
     "repoUrl": "https://github.com/yourorg/qr-scanner-barcode-reader",
     "version": "0.0.0",
-    "downloadUrl": "https://github.com/yourorg/qr-scanner-barcode-reader/releases/latest/download/app2.apk"
+    "downloadUrl": "https://github.com/yourorg/app-releases/releases/download/app2-latest/app2.apk"
   }
 ]
