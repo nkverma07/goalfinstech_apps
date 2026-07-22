@@ -27,7 +27,6 @@ The single source of truth is **`data/apps.json`**. Each entry:
   "name": "All Video Player & Saver",
   "icon": "/dl.jpg",
   "webUrl": "https://goalfinstech.app",
-  "repoUrl": "https://github.com/<owner>/all_in_one_downloader",
   "version": "1.0.2+5",
   "downloadUrl": "https://github.com/<owner>/app1-releases/releases/latest/download/app1.apk"
 }
@@ -64,7 +63,7 @@ shortcut, so you don't touch `downloadUrl` unless you change hosts.
 1. **Deploy to Vercel**: import this repo at vercel.com. Every push to `main`
    auto-redeploys. No env vars needed. Point the `goalfinstech.app` domain at it.
 2. **Seed `data/apps.json`**: set each app's `id`, `name`, `icon`, `webUrl`,
-   `repoUrl`, and its `downloadUrl` (the `appN-releases` latest-download URL).
+   and its `downloadUrl` (the `appN-releases` latest-download URL).
 
 ---
 

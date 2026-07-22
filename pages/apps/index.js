@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import AppListing from '../components/AppListing'
+import AppListing from '../../components/AppListing'
 
-export default function Home() {
+// /apps — same listing as the home page.
+export default function Apps() {
   return (
     <>
       <Head>
-        <title>All Video Player & Saver | QR Scanner Barcode Reader</title>
+        <title>Apps | All Video Player & Saver | QR Scanner Barcode Reader</title>
         <meta
           name="description"
           content="Official update portal for All Video Player & Saver and QR Scanner Barcode Reader."
