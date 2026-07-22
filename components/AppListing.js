@@ -42,18 +42,17 @@ export default function AppListing() {
               <h2>{app.name}</h2>
               <p className="muted">Version {app.version}</p>
               <div className="stats">
-                {app.ratingCount > 0 ? (
+                {app.rating > 0 ? (
                   <span className="stat">
                     <Stars rating={app.rating} />
                     <span className="num">{Number(app.rating).toFixed(1)}</span>
-                    <span className="sub">({Number(app.ratingCount).toLocaleString()})</span>
                   </span>
                 ) : (
                   <span className="stat muted">No ratings yet</span>
                 )}
                 <span className="dot">·</span>
                 <span className="stat">
-                  <strong>{Number(app.downloads || 0).toLocaleString()}</strong>
+                  <strong>{Number(app.downloads || 0).toLocaleString()}+</strong>
                   <span className="sub">downloads</span>
                 </span>
               </div>

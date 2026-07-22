@@ -5,9 +5,8 @@
     "icon": "/dl.jpg",
     "version": "1.0.1+4",
     "downloadUrl": "https://dl.goalfinstech.app/release.apk",
-    "rating": 0,
-    "ratingCount": 0,
-    "downloads": 0
+    "rating": 4.3,
+    "downloads": 90000
   },
   {
     "id": "app2",
@@ -15,8 +14,7 @@
     "icon": "/qr.png",
     "version": "0.0.0",
     "downloadUrl": "https://github.com/yourorg/app2-releases/releases/latest/download/app2.apk",
-    "rating": 0,
-    "ratingCount": 0,
-    "downloads": 0
+    "rating": 4.3,
+    "downloads": 90000
   }
 ]
